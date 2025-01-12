@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            height: 100vh;
+            justify-items: center;
+            align-items: center;
+        }
+        .service {
+            background-color: #222;
+            width: 95%;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            border-bottom: 2px solid white;
+            opacity: 0;
+            transform: translateX(-100%);
+            animation: slideIn 0.5s forwards;
+        }
+        .service:nth-child(2) {
+            transform: translateX(100%);
+        }
+        .service:nth-child(1) { animation-delay: 0.1s; }
+        .service:nth-child(2) { animation-delay: 0.2s; }
+        .service:nth-child(3) { animation-delay: 0.3s; }
+        .service:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h2 {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="service top-left">
+            <h2>CI/CD Pipeline</h2>
+            <p>We streamline your development process by automating code integration, testing, and deployment. Our continuous integration and continuous delivery pipelines ensure faster, more reliable software releases, helping you respond to market demands with agility.
+            
+            </p>
+        </div>
+        <div class="service top-right">
+            <h2>SRE</h2>
+            <p>We provide Site Reliability Engineering services to optimize workflows, enhance collaboration, and ensure efficient project execution. Our solutions enable better coordination between development, operations, and IT teams, driving productivity and operational excellence.</p>
+        </div>
+        <div class="service bottom-left">
+            <h2>AI Monitoring</h2>
+            <p>Our proactive monitoring services provide real-time insights into the health and performance of your systems. We help you detect and address issues before they impact your business, ensuring high uptime, reliability, and seamless user experiences.</p>
+        </div>
+        <div class="service bottom-right">
+            <h2>Cloud Data Migration</h2>
+            <p>Our services provide a secure, customized pathway for your business to transition data to the cloud seamlessly. Tailored migration strategies ensure minimal disruption, while robust security measures and cutting-edge tools guarantee an efficient, reliable transfer. Post-migration, ongoing support optimizes your cloud data environment for performance and cost efficiency. Migrate confidently and harness the power of cloud computing with our expert guidance</p>
+        </div>
+    </div>
+</body>
+</html>
